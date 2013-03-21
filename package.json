@@ -1,0 +1,19 @@
+{
+  "name": "wintersmith-data-json",
+  "version": "0.0.1",
+  "author": {
+    "name": "Boris Ryabov",
+    "email": "rv.boris@gmail.com"
+  },
+  "description": "render data.json file as is",
+  "license": "WTFPL",
+  "dependencies": {
+    "coffee-script": ">=1.2.x"
+  },
+  "devDependencies": {
+    "wintersmith": ">=1.0.0",
+  },
+  "engines": {
+    "node": "*"
+  }
+}
