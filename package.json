@@ -1,19 +1,21 @@
 {
   "name": "wintersmith-data-json",
-  "version": "0.0.1",
-  "author": {
-    "name": "Boris Ryabov",
-    "email": "rv.boris@gmail.com"
-  },
-  "description": "render data.json file as is",
-  "license": "WTFPL",
+  "version": "0.0.2",
+  "description": "Wintersmith plugin to render data.json as is",
+  "main": "index.js",
   "dependencies": {
-    "coffee-script": ">=1.2.x"
+    "coffee-script": "~1.6.2"
   },
-  "devDependencies": {
-    "wintersmith": ">=1.0.0",
+  "scripts": {
+    "preinstall": "npm i -g wintersmith lodash"
   },
-  "engines": {
-    "node": "*"
-  }
+  "repository": {
+    "type": "hg",
+    "url": "https://rvboris@bitbucket.org/rvboris/hoursofcode"
+  },
+  "keywords": [
+    "wintersmith"
+  ],
+  "author": "Boris Ryabov",
+  "license": "WTFPL"
 }
