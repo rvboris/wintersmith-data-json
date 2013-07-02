@@ -1,9 +1,22 @@
-module.exports = (wintersmith, callback) ->
+fs = require 'fs'
 
-  class JsonDataPage extends wintersmith.defaultPlugins.JsonPage
+module.exports = (env, callback) ->
+  class JsonDataPlugin extends env.ContentPlugin
+    constructor: (@filepath, src) ->
+      @src = src
+
     getFilename: ->
-      @_filename
+      @filepath.relative
 
-  wintersmith.registerContentPlugin 'pages', '**/data.json', JsonDataPage
+    getView: -> (env, locals, contents, templates, callback) ->
+      callback null, new Buffer(JSON.stringify(@src))
 
+  JsonDataPlugin.fromFile = (filepath, callback) ->
+    env.utils.readJSON filepath.full, (error, result) ->
+      if not error?
+        plugin = new JsonDataPlugin filepath, result
+      callback error, plugin
+
+  env.registerContentPlugin 'json', '**/data.json', JsonDataPlugin
+  
   callback()

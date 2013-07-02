@@ -1,21 +1,22 @@
 {
   "name": "wintersmith-data-json",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Wintersmith plugin to render data.json as is",
-  "main": "index.js",
-  "dependencies": {
-    "coffee-script": "~1.6.2"
+  "author": "Boris Ryabov",
+  "license": "WTFPL",
+  "keywords": [
+      "wintersmith",
+      "wintersmith-plugin"
+  ],
+  "devDependencies": {
+    "coffee-script": ">1.5",
+    "wintersmith": "2.x"
   },
-  "scripts": {
-    "preinstall": "npm i -g wintersmith lodash"
+  "peerDependencies": {
+    "wintersmith": "2.x"
   },
   "repository": {
     "type": "hg",
-    "url": "https://rvboris@bitbucket.org/rvboris/hoursofcode"
-  },
-  "keywords": [
-    "wintersmith"
-  ],
-  "author": "Boris Ryabov",
-  "license": "WTFPL"
+    "url": "https://bitbucket.org/rvboris/wintersmith-data-json"
+  }
 }
